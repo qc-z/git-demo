@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0;}
+        *::before,*::after {
+            box-sizing: border-box;
+        }
+        body{
+            text-align: center;
+        }
+        nav {
+            display: inline-block;
+            margin-top: 100px;
+        }
+        nav a{
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            perspective: 200px;
+
+        }
+        nav a span {
+            line-height: 40px;
+            background-color:#2195de;
+            display: inline-block;
+            padding:0 25px;
+            position: relative;
+            transition: all 1s;
+            transform-origin: top;
+            transform-style: preserve-3d;
+        }
+        nav a span::after{
+            content: attr(data-hover);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #0965a0;
+            width: 100%;
+            height: 100%;
+            transform: rotateX(-90deg);
+            transform-origin: top;
+        }
+        nav a:hover span {
+            transform: rotateX(90deg) translateY(-20px);
+        }
+
+
+
+		/* 阴影 */
+		.border{
+            font-size: 11px;
+            font-family: 'Open Sans', sans-serif;
+            color: #4A4A4A ;
+            text-align: center;
+            margin: 20px auto;
+            width: 300px;
+            min-height: 310px;
+            padding: 10px;
+            position:relative;
+            background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 1px 1px 4px rgba(0,0,0, 0.1);
+            -webkit-border-bottom-right-radius: 60px 5px;
+
+        }
+        .border:before{
+            content: '';
+            width: 98%;
+            z-index:-1;
+            height: 100%;
+            padding: 0 0 1px 0;
+            position: absolute;
+            bottom:0;
+            right:0;
+            background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f9f9f9), color-stop(.1,#fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 1px 1px 8px rgba(0,0,0, 0.1);
+            -webkit-border-bottom-right-radius: 60px 5px;
+            -webkit-transform: skew(2deg,2deg)
+            translate(3px,8px)
+        }
+        .border:after{
+            content: '';
+            width: 98%;
+            z-index:-1;
+            height: 98%;
+            padding: 0 0 1px 0;
+            position: absolute;
+            bottom:0; right:0;
+            background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#f3f3f3), to(#f6f6f6), color-stop(.1,#fff));
+            border: 1px solid #ccc;
+            -webkit-box-shadow: 0px 0px 8px rgba(0,0,0, 0.1);
+            -webkit-transform: skew(2deg,2deg)
+            translate(-1px,2px)
+        }
+
+        .border img {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .border p{
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        .border h1{
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .border a{
+            text-decoration: none;
+            color: #4A4A4A;
+        }
+
+        .border a:hover{
+            text-decoration: underline;
+            color: #6B6B6B;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="heart/heart.html" target="_black">
+        <span data-hover="跳动的心">跳动的心</span>
+    </a>
+</nav>
+<nav>
+    <a href="cursor/index.html" target="_black">
+        <span data-hover="相册浏览">相册浏览</span>
+    </a>
+</nav>
+<nav>
+    <a href="animate/index.html" target="_black">
+        <span data-hover="动画播放">动画播放</span>
+    </a>
+</nav>
+
+<nav>
+    <a href="demo/index.html" target="_black">
+        <span data-hover="360动画">360动画</span>
+    </a>
+</nav>
+<nav>
+    <a href="accordion/index.html" target="_black">
+        <span data-hover="手风琴">手风琴</span>
+    </a>
+</nav>
+<div class="border">
+    <h1>摄影日志</h1>
+    <img src="http://www.wpthemegenerator.com/wp-content/uploads/2012/06/Image.jpg">
+    
+	<p>
+        春花秋月何时了？往事知多少。小楼昨夜又东风，故国不堪回首月明中。
+        雕栏玉砌应犹在，只是朱颜改。问君能有几多愁？恰似一江春水向东流。
+    </p>
+
+    <br />
+    <a href="http://www.baidu.com/"> 友情链接 </a>
+</div>
+</body>
+</html>
